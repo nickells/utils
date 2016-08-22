@@ -1,7 +1,6 @@
-function countWords(str) {
+function countWords(str, matchCharacters = [' ', ',', '\n', '.']) {
   const obj = {}
   let prevIdx = 0
-  const matchCharacters = [' ', ',', '\n', '.']
   for (let i = 0; i <= str.length; i++) {
     if (matchCharacters.indexOf(str[i]) !== -1 || i === str.length) {
       const thisKey = str.slice(prevIdx, i)

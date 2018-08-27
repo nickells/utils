@@ -2,7 +2,7 @@
 
 const cachePureFunction = ( func ) => {
   const functionData = {}
-  return async ( ...args ) => {
+  return ( ...args ) => {
     const key = args.join( '.' )
     if ( !functionData[ key ]) {
       functionData[ key ] = func( ...args )
